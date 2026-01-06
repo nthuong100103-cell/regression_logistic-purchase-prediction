@@ -3,15 +3,13 @@ import pandas as pd
 import joblib
 import os
 
-# =========================
-# ĐƯỜNG DẪN (GIỐNG RANDOM FOREST)
-# =========================
-BASE_PATH = r"C:\Users\pc\Desktop\Project_Logistic"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-MODEL_PATH = os.path.join(BASE_PATH, "models", "Logistic_best_model.pkl")
-SCALER_PATH = os.path.join(BASE_PATH, "models", "Logistic_scaler.pkl")
-ENCODER_PATH = os.path.join(BASE_PATH, "models", "Logistic_label_encoder.pkl")
-FEATURE_PATH = os.path.join(BASE_PATH, "models", "Logistic_important_features.pkl")
+MODEL_PATH = os.path.join(BASE_DIR, "models", "Logistic_best_model.pkl")
+SCALER_PATH = os.path.join(BASE_DIR, "models", "Logistic_scaler.pkl")
+ENCODER_PATH = os.path.join(BASE_DIR, "models", "Logistic_label_encoder.pkl")
+FEATURE_PATH = os.path.join(BASE_DIR, "models", "Logistic_important_features.pkl")
+
 
 # =========================
 # LOAD ARTIFACTS
@@ -118,3 +116,4 @@ if st.button("🔮 Dự đoán"):
             "Xác suất": probability
         })
     )
+
