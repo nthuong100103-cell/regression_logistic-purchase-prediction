@@ -5,10 +5,10 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-MODEL_PATH = os.path.join(BASE_DIR, "models", "Logistic_best_model.pkl")
-SCALER_PATH = os.path.join(BASE_DIR, "models", "Logistic_scaler.pkl")
-ENCODER_PATH = os.path.join(BASE_DIR, "models", "Logistic_label_encoder.pkl")
-FEATURE_PATH = os.path.join(BASE_DIR, "models", "Logistic_important_features.pkl")
+MODEL_PATH = os.path.join(BASE_DIR, "models", "Logistic_best.pkl")
+SCALER_PATH = os.path.join(BASE_DIR, "models", "scaler (2).pkl")
+ENCODER_PATH = os.path.join(BASE_DIR, "models", "label_encoders (1).pkl")
+FEATURE_PATH = os.path.join(BASE_DIR, "models", "important_features (1).pkl")
 
 
 # =========================
@@ -116,4 +116,5 @@ if st.button("🔮 Dự đoán"):
             "Xác suất": probability
         })
     )
+
 
